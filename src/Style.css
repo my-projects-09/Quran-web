@@ -1,0 +1,206 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  scroll-behavior: smooth;
+
+  scrollbar-width: 0;
+  scrollbar-width: none;
+}
+
+
+body{
+  background-color: var(--bg_color);
+            
+  color: var(--text_color);
+
+  font-family: serif !important;
+
+  scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar{
+  display: none;
+}
+
+/* ======================================================================================== */
+/*                                       المتغيرات                                         */
+/* ======================================================================================== */
+
+:root{
+  --bg_color: #F7F3E8;
+  --header_color: #123C35;
+  --footer_color: #123C35;
+
+  --name_color: #12453c;
+  --desc_color: #8B7440;    /*هاظ الي تحت الاسم (الوصف تاع الشيخ و اسمة بالانجليزي)*/
+  --text_color : black;
+
+  --arabic_font :'Amiri', serif !important;
+}
+
+/* ======================================================================================== */
+/*                      الخطوط المستخدمة بشكل خاص (داخل الكلاسات)                         */
+/* ======================================================================================== */
+
+.arabic_font{
+  font-family: 'Amiri', serif !important;
+}
+
+.english_font{
+  font-family: 'Cormorant Garamond', !important;
+}
+
+.color_des{
+  color: var(--desc_color);
+}
+
+.title_video_color{
+  color: #F7F3E8;
+}
+
+/* ======================================================================================== */
+/* ======================================================================================== */
+
+.hide{
+  display: none;
+}
+
+/* ======================================================================================== */
+/* ======================================================================================== */
+
+.dev_line{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.line{
+  width: 70%;
+  height: 3px;
+  border-radius: 500%;
+  background: linear-gradient(135deg, #d2ad47 0%, #e9c666 50%, #c7a445 100%);    
+}
+
+
+
+
+/* ================================================================================================== */
+
+.short_videos_container{
+  width: 100%;
+  margin: 20px 0 80px 0;
+  padding: 20px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.short_videos_title{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+
+}
+
+
+.video_grid{
+  width: 100%;
+  padding: 10px;
+
+  display: grid;
+  gap: 20px;
+}
+
+.short_videos_box{
+  grid-template-columns: repeat(auto-fit, minmax(216px, 1fr));
+  justify-content: center;
+}
+
+.best_videos_box{
+  grid-template-columns: repeat(3, 216px);
+  justify-content: center;
+  gap: 20px;
+}
+
+
+
+.video_card{
+  background-color: var(--name_color);
+  color: white;
+  padding: 8px;
+  border-radius: 16px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+
+  transition: all 0.4s ease;
+}
+
+.video_card:hover{
+  transform: translateY(-8px);
+}
+
+.short_video_size{
+  border-radius: 16px;
+  width: 200px;
+  max-width: 100%;
+  height: 350px;
+
+  border: 0;
+}
+
+
+
+
+.long_videos_box{
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.long_video_size{
+  width: 100%;
+  max-width: 700px;
+  height: 200px;
+
+  border: 0;
+  border-radius: 16px;
+}
+
+.short_video_card{
+  width: min(216px, 100%);
+  justify-self: center;
+}
+
+.long_video_card{
+  width: 100%;
+}
+
+@media (max-width: 600px){
+  .video_card{
+    transition: none;
+  }
+
+  .video_card:hover{
+    transform: none;
+  }
+
+  .short_videos_box{
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .best_videos_box{
+    grid-template-columns: repeat(2, minmax(0, 216px));
+  }
+
+  .long_videos_box{
+    grid-template-columns: 1fr;
+  }
+}
+
+

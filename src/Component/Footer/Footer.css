@@ -1,0 +1,47 @@
+
+
+
+
+
+.footer{
+    background-color: 0;
+    padding: 8px;
+    margin-top: 10px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.title_in_footer{
+    color: 0;
+}
+
+
+.right_footer{
+    padding: 8px;
+    margin: 8px;
+
+    display: flex;
+    flex-direction: column;
+
+}
+
+.center_footer{
+    padding: 8px;
+    margin: 8px;
+
+    display: flex;
+    flex-direction: column;
+
+}
+
+.left_footer{
+    padding: 8px;
+    margin: 8px;
+
+    display: flex;
+    flex-direction: column;
+
+}
