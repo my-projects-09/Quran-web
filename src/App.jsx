@@ -64,8 +64,9 @@ function App() {
 
       <ShowVideos  videos={best_videos}  titleAr="أفضل الفيديوهات"  titleEn="The Best Videos" layout="best"/>
       <ShowVideos  videos={short_category}  titleAr="الفيديوهات القصيرة"  titleEn="The Short Videos"/>
-      <ShowVideos  videos={long_category}  titleAr="الفيديوهات الطويلة"  titleEn="The Long Videos"/>
       <ShowVideos  videos={advice_category}  titleAr="بعض النصائح المفيدة"  titleEn="advices"/>
+      <ShowVideos  videos={long_category}  titleAr="الفيديوهات الطويلة"  titleEn="The Long Videos"/>
+      
 
     </div>
   );
